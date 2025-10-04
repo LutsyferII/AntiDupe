@@ -60,7 +60,7 @@ public class CMD implements CommandExecutor, TabCompleter  {
 			}
 			for(Zaebalo za : zaeb) {
 				if(za.has>1) {
-					sender.sendMessage("�������� ��������!!!! ("+za.has+") "+za.uuid);
+					sender.sendMessage("Catched!!!! ("+za.has+") "+za.uuid);
 					for(ItemToPlayer item : za.items) {
 						sender.sendMessage("	["+item.player.getName()+"] item: "+item.item.getItemMeta().getDisplayName());
 					}
@@ -72,7 +72,7 @@ public class CMD implements CommandExecutor, TabCompleter  {
 		}else if(args.length==2&&args[0].equalsIgnoreCase("player")) {
 			Player player = Bukkit.getServer().getPlayer(args[1]);
 			if(player==null) {
-				sender.sendMessage("����� ����� �� ������!");
+				sender.sendMessage("Player is not online!");
 				return false;
 			}
 			PlayerInventory inv = player.getInventory();
@@ -98,7 +98,7 @@ public class CMD implements CommandExecutor, TabCompleter  {
 			}
 			for(ItemHolder holder : find) {
 				if(holder.howMuch()>1) {
-					sender.sendMessage("������� �������! ["+holder.has+"] "+holder.uuid);
+					sender.sendMessage("Catched! ["+holder.has+"] "+holder.uuid);
 					for(ItemStack item : holder.items) {
 						sender.sendMessage("      "+item.getItemMeta().getDisplayName());
 					}
@@ -132,7 +132,7 @@ public class CMD implements CommandExecutor, TabCompleter  {
 				find = true;
 				holder.plus();
 				holder.additem(item);
-				Bukkit.getConsoleSender().sendMessage("������ �� ���� ��� ������� "+item.getItemMeta().getDisplayName()+" | "+uuid);
+				Bukkit.getConsoleSender().sendMessage("find some item "+item.getItemMeta().getDisplayName()+" | "+uuid);
 				return;
 			}
 		}
