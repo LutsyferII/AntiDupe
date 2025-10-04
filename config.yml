@@ -1,7 +1,0 @@
-vanilla{id=DIRT}:
-  admin: 99999
-  l1: 8
-  l2: 4 #hezar.blocklimit.l2
-  l3: 2
-  main: 1
-
