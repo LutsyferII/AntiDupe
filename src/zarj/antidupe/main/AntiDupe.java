@@ -57,14 +57,14 @@ public class AntiDupe extends JavaPlugin {
 
 			@Override
 			public void run() {
-				Bukkit.getServer().getConsoleSender().sendMessage("ЗАПУЩЕН ПОИСК ПИДОРАСОВ!");
+				Bukkit.getServer().getConsoleSender().sendMessage("Lets Find them!!");
 				Popavsya("AUTO CATCH");
 				
 			}
 			
 		},tick*60,tick*3600);
 
-		Bukkit.getServer().getConsoleSender().sendMessage("СЛУЖБА ОТЛОВА ПИДОРОВ ЗАПУЩЕНА!");
+		Bukkit.getServer().getConsoleSender().sendMessage("Dupers scaner is enable!");
 		
 	}
 	public static void Popavsya(String log_tag) {
@@ -96,7 +96,7 @@ public class AntiDupe extends JavaPlugin {
 				log_data+="\n   ("+za.has+")  "+za.uuid;
 				has = true;
 				
-				Bukkit.getServer().getConsoleSender().sendMessage("ПОПАЛИСЬ НАХУУУУЙ!!!! ("+za.has+") "+za.uuid);
+				Bukkit.getServer().getConsoleSender().sendMessage("Cath him!!!! ("+za.has+") "+za.uuid);
 				for(ItemToPlayer item : za.items) {
 					log_data+="\n      ["+item.player.getName()+"] item: "+item.item.getItemMeta().getDisplayName();
 					Bukkit.getServer().getConsoleSender().sendMessage("	["+item.player.getName()+"] item: "+item.item.getItemMeta().getDisplayName());
@@ -107,7 +107,7 @@ public class AntiDupe extends JavaPlugin {
 		if(has) {
 			log(log_tag,log_data);
 		}else {
-			Bukkit.getServer().getConsoleSender().sendMessage("ПИДОРОВ НЕ НАЙДЕНО(");
+			Bukkit.getServer().getConsoleSender().sendMessage("Not find(");
 		}
 	}
 	public static void log(String log_tag,String log_data){
@@ -164,3 +164,4 @@ public class AntiDupe extends JavaPlugin {
 		
 	}
 }
+
